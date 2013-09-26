@@ -69,7 +69,7 @@ File required
 | inspection_rating | string | Yes | Summary inspection rating or result (e.g. pass/ fail, satisfactory/ not-satisfactory, etc) associated with the inspection if one exists.|
 | inspection_score | number | No | Optional. Numerical score associated with the inspection if one exists |
 
-##violations.csv
+## violations.csv
 
 The violations.csv file contains information about specific violations. 
 
@@ -90,7 +90,7 @@ This file is required.
 | violation_severity | string | No | Must be one of the following three categories: high (imminently harmful to health and requires rapid correction) and low (nuisance with correction over a reasonable period of time)
 legal_authority | string | No | The legal authority under which a violation is issued.  For example, NYC Housing Maintenance Code or the California Health and Safety Code. |
 
-feed_info.csv
+## feed_info.csv
 The feed.csv file contains information about the source of the data in the files. This file should only contain a single row. 
 
 This file is required.
@@ -98,99 +98,51 @@ This file is required.
 
 | Name |  Type | Required | Description |
 |:-----|:------|:---------|:------------|
-| feed_date | date | Yes | Date this feed was generated in YYYY-MM-DD format | feed_version | string
-Yes
-Version of the OHHS specification used to generate this feed. For example ‘0.1’
-municipality_name
-string
-Yes
-Name of the municipality providing this feed. For example ‘San Francisco’ or ‘Multnomah County’
-building_id_definition
-string
-Yes
-Describes how the municipality defines or creates the variable building_id convention for defining  building_id.
-parcel_id_definition
-string
-Yes
-Describes how the municipality defines or creates the variable parcel_id
-municipality_url
-string
-No
-URL of the publishing municipality’s website
-contact_email
-string
-No
-Email address of the person to contact regarding invalid data in this feed
+| feed_date | date | Yes | Date this feed was generated in YYYY-MM-DD format | 
+| feed_version | string | Yes | Version of the OHHS specification used to generate this feed. For example ‘0.1’
+| municipality_name | string | Yes | Name of the municipality providing this feed. For example ‘San Francisco’ or ‘Multnomah County’|
+| building_id_definition | string | Yes | Describes how the municipality defines or creates the variable building_id convention for defining  building_id. |
+| parcel_id_definition | string | Yes | Describes how the municipality defines or creates the variable parcel_id |
+| municipality_url | string | No | URL of the publishing municipality’s website | 
+| contact_email | string | No | Email address of the person to contact regarding invalid data in this feed |
 
-parcels.zip
+## parcels.zip
 The parcels shapefile contains municipality-wide information about the parcel or lot property lines. The shapefile will be comprised of six files with the same name ending in .dbf, .prj, .sbn, .sbx, .shp, .shx, and .shp.xml. This file can be provided separately from the .csv files as it may be updated on a different frequency.
 
 This file is optional
 
-
-Name
-Type
-Required
-Description
-Shape
-geometry
-Yes
-This field contains data that describes the boundaries of the lot. It is generated automatically when the shapefile is created and will display a type of polygon or multipolygon.
-parcel_id
-string
-Yes
-Local identifier for all parcel footprint that the building sits on. 
-building_id
-string
-Yes
-Unique identifier for the residential building.  Can correspond to more than one parcel_id or an address range
+| Name |  Type | Required | Description |
+|:-----|:------|:---------|:------------|
+| Shape | geometry | Yes | This field contains data that describes the boundaries of the lot. It is generated automatically when the shapefile is created and will display a type of polygon or multipolygon.|
+| parcel_id | string | Yes | Local identifier for all parcel footprint that the building sits on. |
+| building_id | string | Yes | Unique identifier for the residential building.  Can correspond to more than one parcel_id or an address range |
 
 
-Violation Categories
+## Violation Categories
 The table below provides a lookup table of standard violation categories. This is lookup table is used to populate the violation categories field in violations.csv.
 
-Violation Category
-Violation Category Examples
-Animals and Pests
-Cockroaches; rats; mice; bedbugs; racoons
-Vegetation
-Overgrown vegetation, landslide
-Refuse
-Refuse accumulation; dumping; spoiled food
-Sanitation
-Unsanitary floors or walls; non-functioning sewage system
-Radiation Hazard
-Radon
-Air Pollutants and Odors
-Nuisance odors; smoking in common areas
-Bioological Hazard
-Medical waste; Contaminated Needles, mold/mildew
-Chemical Hazards
-Lead hazard; asbestos hazard
-Noise
-Interior noise violation; exterior noise violation
-Indoor Climate
-Inadequate heat or ventilation
-Plumbing 
-No running water; inoperable toilet
-Electrical
-Exposed electrical hazards; excess electrical loads
-Fire Hazards and Prevention
-Non-functioning smoke detector; heat source near combustible material
-Building Security
-Inadequate exterior lighting
-Building Structure
-Water or moisture intrusion; structural hazard; 
-Planning or Zoning
-Unpermitted use; violations of conditions of use
-Abandon, Boarded or Substandard Building
-Abandoned Building; Blighted Building; Dilapidated Housing 
-No Permit
-No permit for electrical, gas, construction, plumbing ect
-Water Hazard
-Storm Water; Water Leak; Sewer Leak
-Gas Hazard
-Gas Leak, Illegal Gas Appliance
-Other
-Other
+| Violation Category | Violation Category Examples |
+|:-------------------|:----------------------------|
+| Animals and Pests | Cockroaches; rats; mice; bedbugs; racoons |
+| Vegetation | Overgrown vegetation, landslide |
+| Refuse | Refuse accumulation; dumping; spoiled food |
+| Sanitation | Unsanitary floors or walls; non-functioning sewage system |
+| Radiation Hazard | Radon |
+| Air Pollutants and Odors | Nuisance odors; smoking in common areas |
+| Bioological Hazard | Medical waste; Contaminated Needles, mold/mildew |
+| Chemical Hazards | Lead hazard; asbestos hazard |
+| Noise | Interior noise violation; exterior noise violation | 
+| Indoor Climate | Inadequate heat or ventilation |
+| Plumbing | No running water; inoperable toilet |
+| Electrical | Exposed electrical hazards; excess electrical loads |
+| Fire Hazards and Prevention | Non-functioning smoke detector; heat source near combustible material |
+| Building Security | Inadequate exterior lighting |
+| Building Structure | Water or moisture intrusion; structural hazard |
+| Planning or Zoning | Unpermitted use; violations of conditions of use |
+| Abandon, Boarded or Substandard Building | Abandoned Building; Blighted Building; Dilapidated Housing |
+| No Permit | No permit for electrical, gas, construction, plumbing ect |
+| Water Hazard |
+| Storm Water; Water Leak; Sewer Leak |
+| Gas Hazard | Gas Leak, Illegal Gas Appliance |
+| Other | Other |
 
