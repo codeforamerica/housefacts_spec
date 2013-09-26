@@ -74,6 +74,7 @@ File required
 The violations.csv file contains information about specific violations. 
 
 This file is required.
+
 | Name |  Type | Required | Description |
 |:-----|:------|:---------|:------------|
 | violation_id | number | Yes | Unique identifier for the violations |
