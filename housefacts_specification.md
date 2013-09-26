@@ -69,7 +69,7 @@ File required
 | inspection_rating | string | Yes | Summary inspection rating or result (e.g. pass/ fail, satisfactory/ not-satisfactory, etc) associated with the inspection if one exists.|
 | inspection_score | number | No | Optional. Numerical score associated with the inspection if one exists |
 
-## violations.csv
+### violations.csv
 
 The violations.csv file contains information about specific violations. 
 
@@ -77,18 +77,18 @@ This file is required.
 | Name |  Type | Required | Description |
 |:-----|:------|:---------|:------------|
 | violation_id | number | Yes | Unique identifier for the violations |
-| inspection_id | | number | Yes | Unique identifier for the inspection |
+| inspection_id | number | Yes | Unique identifier for the inspection |
 | inspection_agency | string | Yes | String representing the inspecting agency.  Must be one of the following types: Health, Environment, Building, Housing, Planning, Fire, Code Enforcement |
 | violation_address | string | No | Street address of the residential building. For example 706 Mission St. Format should conform to ESRI government data scheme for address. |
 | violation_unit_number | string | No | Required if if inspection is for specific unit in a multi-unit building. A unit name or number is acceptable. |
 | violation_city | string | No | City where the property is located. |
 | violation_state | string | No | State where the property is located. In the U.S. this should be the two-letter code for the state.|
 | violation_date | date | Yes | Date that the  violation was recorded in YYYY-MM-DD format. This should correspond with at least one inspection date. |
-| violation_date_closed | date | Yes | Date that the  violation was closed in YYYY-MM-DD format. | violation_category | string | Yes |
-| Reporting agency must assign each locally defined violation type on one of the following categories in the OHHS list of violation categories
+| violation_date_closed | date | Yes | Date that the  violation was closed in YYYY-MM-DD format. 
+| violation_category | string | Yes | Reporting agency must assign each locally defined violation type on one of the following categories in the OHHS list of violation categories |
 | violation_type | string | Yes | Locally defined violation type (bedbugs, mold, etc) |
-| violation_severity | string | No | Must be one of the following three categories: high (imminently harmful to health and requires rapid correction) and low (nuisance with correction over a reasonable period of time)
-legal_authority | string | No | The legal authority under which a violation is issued.  For example, NYC Housing Maintenance Code or the California Health and Safety Code. |
+| violation_severity | string | No | Must be one of the following three categories: high (imminently harmful to health and requires rapid correction) and low (nuisance with correction over a reasonable period of time) |
+| legal_authority | string | No | The legal authority under which a violation is issued.  For example, NYC Housing Maintenance Code or the California Health and Safety Code. |
 
 ## feed_info.csv
 The feed.csv file contains information about the source of the data in the files. This file should only contain a single row. 
