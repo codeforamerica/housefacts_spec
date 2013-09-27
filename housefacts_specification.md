@@ -25,7 +25,7 @@ All required CSV files and any available optional files must be collected in a s
 ### buildings.csv
 The building.csv file contains information about the residential building, such as location, owner, age, and value. The building_id is a unique identifier defined by the locality for the building - a contiguous structure with one or more residential dwelling units.  
 
-Ths file is required
+Ths file is required.
 
 | Name |  Type | Required | Description |
 |:-----|:------|:---------|:------------|
